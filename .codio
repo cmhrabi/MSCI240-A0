@@ -1,0 +1,14 @@
+{
+    // This file is used to configure the three buttons along Codio's top menu.
+    
+    // Run button configuration
+    "commands": {
+        "Compile & Run": "javac {{filename}} && java {{filename_no_ext}}",
+        "Compile": "javac {{filename}}",
+        "Run": "java {{filename_no_ext}}"
+    },
+    // Preview button configuration
+    "preview": {},
+    // Debugger target button configuration
+    "debugger": [{"type":"JAVA","command":"-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5105","before":"javac -g -d . {{filepath}} && java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5105 {{filepath}} ","single":true,"path":"{{filepath}}","args":"","rootFolder":"","uuid":"89ab7510-bc8a-b256-51d6-bf1c249645b8","name":"Debug Current File"}]
+}
